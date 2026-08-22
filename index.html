@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Contact page — leave a message" />
+  <meta name="author" content="Aditya Kumar Maurya" />
+  <title>While You Were Out — Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__grain"></div>
+    <div class="hero__inner">
+      <div class="hero__phone">
+        <img src="assets/img/contact-bg.jpg" alt="Vintage rotary telephone, handset off the hook" />
+        <span class="hero__tag">LINE 2007 — OPEN</span>
+      </div>
+      <div class="hero__copy">
+        <p class="eyebrow">SWITCHBOARD &middot; EST. CONTACT DESK</p>
+        <h1>Pick up the line.</h1>
+        <p class="hero__sub">
+          No chatbots, no hold music — just leave word and I'll ring you back.
+          Reach me directly, or fill the slip below.
+        </p>
+        <a href="#slip" class="btn-dial">
+          <span class="btn-dial__ring"></span>
+          Leave a message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CORD DIVIDER ===== -->
+  <div class="cord" aria-hidden="true">
+    <svg viewBox="0 0 1200 90" preserveAspectRatio="none">
+      <path class="cord__path" d="M0,45 C60,10 100,80 160,45 C220,10 260,80 320,45
+        C380,10 420,80 480,45 C540,10 580,80 640,45
+        C700,10 740,80 800,45 C860,10 900,80 960,45
+        C1020,10 1060,80 1120,45 C1150,28 1180,60 1200,45" />
+    </svg>
+  </div>
+
+  <!-- ===== DIRECTORY STRIP ===== -->
+  <section class="directory">
+    <div class="directory__inner">
+      <a class="directory__card" href="aditya200704@gmail.com">
+        <span class="directory__digit">1</span>
+        <span class="directory__label">Email</span>
+        <span class="directory__value">aditya200704@gmail.com</span>
+      </a>
+      <a class="directory__card" href="tel:+919305364359">
+        <span class="directory__digit">2</span>
+        <span class="directory__label">Phone</span>
+        <span class="directory__value">+91 93053 64359</span>
+      </a>
+      <div class="directory__card directory__card--dial" id="dialCard">
+        <span class="directory__digit">3</span>
+        <span class="directory__label">Dial it yourself</span>
+        <div class="dial" id="rotaryDial">
+          <div class="dial__center"><span id="dialReadout">—</span></div>
+          <button type="button" class="dial__num" style="--i:0" data-num="1">1</button>
+          <button type="button" class="dial__num" style="--i:1" data-num="2">2</button>
+          <button type="button" class="dial__num" style="--i:2" data-num="3">3</button>
+          <button type="button" class="dial__num" style="--i:3" data-num="4">4</button>
+          <button type="button" class="dial__num" style="--i:4" data-num="5">5</button>
+          <button type="button" class="dial__num" style="--i:5" data-num="6">6</button>
+          <button type="button" class="dial__num" style="--i:6" data-num="7">7</button>
+          <button type="button" class="dial__num" style="--i:7" data-num="8">8</button>
+          <button type="button" class="dial__num" style="--i:8" data-num="9">9</button>
+          <button type="button" class="dial__num" style="--i:9" data-num="0">0</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MESSAGE SLIP (form) ===== -->
+  <section class="slip-wrap" id="slip">
+    <form class="slip" id="messageForm" action="https://formsubmit.co/aditya200704@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Contact Form Message">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <header class="slip__header">
+        <h2>WHILE YOU WERE OUT</h2>
+        <span class="slip__date" id="slipDate"></span>
+      </header>
+
+      <div class="slip__row">
+        <label for="name">FROM</label>
+        <input id="name" name="Name" type="text" required autocomplete="name" />
+      </div>
+
+      <div class="slip__row">
+        <label for="email">EMAIL</label>
+        <input id="email" name="Email" type="email" required autocomplete="email" />
+      </div>
+
+      <div class="slip__row">
+        <label for="phone">PHONE</label>
+        <input id="phone" name="Phone" type="tel" required autocomplete="tel" />
+      </div>
+
+      <div class="slip__checks">
+        <span class="slip__checkitem"><input type="checkbox" checked disabled /> TELEPHONED</span>
+        <span class="slip__checkitem"><input type="checkbox" disabled /> RETURNED YOUR CALL</span>
+        <span class="slip__checkitem"><input type="checkbox" checked disabled /> WILL CALL AGAIN</span>
+      </div>
+
+      <div class="slip__row slip__row--message">
+        <label for="message">MESSAGE</label>
+        <textarea id="message" name="Message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="slip__submit">
+        <span id="submitLabel">Send message</span>
+      </button>
+      <p class="slip__note" id="formNote" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <ul class="socials">
+        <li><a href="https://github.com/aditya-kumar-maurya" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="#!" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="mailto:aditya200704@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+      <p>&copy; <span id="year"></span> Aditya Kumar Maurya — Line disconnects at midnight.</p>
+    </div>
+  </footer>
+
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
